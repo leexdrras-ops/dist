@@ -20,20 +20,15 @@
   <link rel="manifest" href="manifest.json">
 
   <script>
-    var flet = {
-      pyodide: false,
-      multiView: false,
-      noCdn: false,
-      webSocketEndpoint: "/ws",
-      entrypointBaseUrl: "/",
-      assetBase: "/",
-      routeUrlStrategy: "path",
-      canvasKitBaseUrl: "/canvaskit/",
-      pyodideUrl: "/pyodide/pyodide.js",
-      webRenderer: "auto",
-      fontFallbackBaseUrl: "assets/fonts/", // for Noto Emoji, use Google CDN
-      appPackageUrl: "app.tar.gz"
-    }
+      var flet = {
+        ...
+        webSocketEndpoint: "/leexdrras-ops/ws",         // 改這裡
+        entrypointBaseUrl: "/leexdrras-ops/",          // 改這裡
+        assetBase: "/leexdrras-ops/",                  // 改這裡
+        canvasKitBaseUrl: "/leexdrras-ops/canvaskit/", // 改這裡
+        pyodideUrl: "/leexdrras-ops/pyodide/pyodide.js", // 改這裡
+        ...
+      }
 
     flet.flutterAppLoaded = new Promise((resolve) => {
       flet.flutterAppResolve = resolve;
