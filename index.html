@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html>
-<meta http-equiv="refresh" content="0; url=/leexdrras-ops/">
 <head>
-  <base href="/leexdrras-ops/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Flet application.">
-
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="online_radar">
+  
   <link rel="apple-touch-icon" href="icons/apple-touch-icon-192.png">
-
   <link rel="icon" type="image/png" href="favicon.png" />
-
   <title>online_radar</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     var flet = {
-      pyodide: false,
+      pyodide: true,
       multiView: false,
       noCdn: false,
-      webSocketEndpoint: "/leexdrras-ops/ws",
-      entrypointBaseUrl: "/leexdrras-ops/",
-      assetBase: "/leexdrras-ops/",
+      webSocketEndpoint: "ws",
+      entrypointBaseUrl: "./",
+      assetBase: "./",
       routeUrlStrategy: "path",
-      canvasKitBaseUrl: "/leexdrras-ops/canvaskit/",
-      pyodideUrl: "/leexdrras-ops/pyodide/pyodide.js",
+      canvasKitBaseUrl: "canvaskit/",
+      pyodideUrl: "pyodide/pyodide.js",
       webRenderer: "auto",
       fontFallbackBaseUrl: "assets/fonts/",
       appPackageUrl: "app.tar.gz"
@@ -39,14 +35,7 @@
   </script>
 
   <script>
-    flet.pyodide = true;
-    flet.micropipIncludePre = false;
     flet.pythonModuleName = "main";
-    flet.noCdn = false;
-    flet.webRenderer = "auto";
-    flet.routeUrlStrategy = "path";
-    flet.entrypointBaseUrl = "/leexdrras-ops/";
-    flet.assetBase = "/leexdrras-ops/";
   </script>
 </head>
 
@@ -64,7 +53,7 @@
     <img src="icons/loading-animation.png" alt="Loading..." />
   </div>
 
-  <script src="/leexdrras-ops/python.js"></script>
-  <script src="/leexdrras-ops/flutter_bootstrap.js" async></script>
+  <script src="python.js"></script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
